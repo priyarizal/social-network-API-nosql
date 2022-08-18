@@ -13,7 +13,7 @@ const {
     createThought,
     updateThought,
     deleteThought, 
-} = require('../../controllers/thoughtController');
+} = require('../../controllers/ThoughtControllers');
 
 //gets thoughts and posts thoughts
 router.route('/').get(getThoughts).post(createThought);
