@@ -1,5 +1,5 @@
-const  User = require('../models/User');
-const  Thought = require('../models/Thought');
+const User = require('../models/User');
+const Thought = require('../models/Thought');
 
 module.exports = {
     // gets all user
@@ -79,5 +79,24 @@ module.exports = {
             res.status(500).json(err);
         }
 
-    }
+    },
+
+    deleteFriendFromUser(req, res) {
+        console.log('Youre no longer friends')
+        User.findOneAndUpdate(
+            { _id: req.params.userId },
+            { $pull: { friends: req.params.friendId } },
+            { runValidators: true, new: true }
+        )
+            .then((user) =>
+                !user
+                    ? res.status(404)
+                        .json({ message: 'No friend found with this ID' })
+                    : res.json(user)
+            )
+            .catch((err) => res.status(500).json(err));
+    },
+
 };
+
+
