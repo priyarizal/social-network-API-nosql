@@ -1,4 +1,4 @@
-# social-network-API-nosql
+# Social-Network-API-nosql
 
 Using MongoDB, and Express, I've created a social network web application where users can share their thoughts, and react to friend's thoughts, as well as create a friend list. I used Express.js for routing, a MongoDB database, and the Mongoose ODM. 
 
@@ -11,8 +11,10 @@ Using MongoDB, and Express, I've created a social network web application where 
 
 # Github Link and Demo Video link
 
-- 
-- 
+- https://github.com/priyarizal/social-network-API-nosql
+
+- https://drive.google.com/file/d/1jqvYPSjXbOFxaxmix0ou6jFpCU2DJMOv/view
+
 
 # Significant Code Snippets
 get route to get all thoughts and single thought
@@ -61,16 +63,12 @@ deleteThought(req, res) {
 
 ```
 
-
 # Screen Shots for overall Design Highlight
 
-![dailycalender]()
-![dailycalender]()
-![dailycalender]()
+![dailycalender](./images/userbyId.png)
+![dailycalender](./images/allusers.png)
+![dailycalender](./images/createreaction.png)
 
-# Gif for Demoing Functionality
-
-![dailycalender]()
 
 # Contributors
 
