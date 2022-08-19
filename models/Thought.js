@@ -44,8 +44,8 @@ const thoughtSchema = new mongoose.Schema(
             type: Date,
             default: Date.now,
             get: function (createdDate) {
-                
-
+             moment(createdDate).format("MMM Do, YYYY [at] h:mm a");
+             return;
             }
             // : timestamp,
         },
