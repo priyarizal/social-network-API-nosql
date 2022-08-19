@@ -2,5 +2,26 @@
   "dependencies": {
     "express": "^4.18.1",
     "mongoose": "^6.5.2"
-  }
+  },
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node utils/seed",
+    "data": "node utils/data"
+  },
+  "name": "social-network-api-nosql",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/priyarizal/social-network-API-nosql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/priyarizal/social-network-API-nosql/issues"
+  },
+  "homepage": "https://github.com/priyarizal/social-network-API-nosql#readme"
 }
