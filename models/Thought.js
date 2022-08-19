@@ -1,5 +1,6 @@
 const { ObjectId } = require("bson");
 const mongoose = require("mongoose");
+const { Schema, model, Types } = require('mongoose');
 
 
 const reactionSchema = new mongoose.Schema(
@@ -21,7 +22,8 @@ const reactionSchema = new mongoose.Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            getter: true,
+            get: (timestamp) => new Date(timestamp).toLocaleString()
+
         },
     },
     {
@@ -34,19 +36,16 @@ const reactionSchema = new mongoose.Schema(
 
 const thoughtSchema = new mongoose.Schema(
     {
-        thoughtText: { 
-            type: String, 
-            required: true, 
+        thoughtText: {
+            type: String,
+            required: true,
             min: 1,
             max: 280
         },
         createdAt: {
             type: Date,
             default: Date.now,
-            get: function (createdDate) {
-             moment(createdDate).format("MMM Do, YYYY [at] h:mm a");
-             return;
-            }
+            get: (timestamp) => new Date(timestamp).toLocaleString()
             // : timestamp,
         },
         //the user that created this thought
